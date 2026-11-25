@@ -40,9 +40,14 @@ node scripts/screenshots.mjs   # screenshots of every screen (after build)
 ## Built with
 
 - React 19 and Vite
+- Tailwind CSS with a shadcn-style design system written for this app
+  (tokens in `tailwind.config.js`, shared components in `src/index.css`),
+  plus Lucide icons. The look is a friendly chat app: soft lavender
+  background, white message bubbles, big rounded corners, and a tone
+  gauge that fills with the winning tone's colour.
 - A naive Bayes text classifier written from scratch (no ML library)
 - localStorage for user examples and history
-- Inter and Space Grotesk fonts, self hosted so the app works offline
+- Nunito and Inter fonts, self hosted so the app works offline
 
 ## Known limits
 

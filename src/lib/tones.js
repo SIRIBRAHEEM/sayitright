@@ -1,10 +1,11 @@
-// One colour per tone, used for bars and badges across the app.
+// One colour per tone, used for the gauge, bars and badges across the app.
+// Soft chat palette that sits well on the lavender background.
 export const TONE_COLORS = {
-  Polite: '#3ddc97',
-  Friendly: '#4cc9f0',
-  Neutral: '#a3a3c2',
-  Urgent: '#ffc24b',
-  Harsh: '#ff6b81',
+  Polite: '#1d9e75',
+  Friendly: '#3a9ad9',
+  Neutral: '#9b93b8',
+  Urgent: '#f5a623',
+  Harsh: '#e5484d',
 }
 
 export const TONE_ADVICE = {

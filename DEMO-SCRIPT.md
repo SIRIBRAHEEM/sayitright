@@ -8,10 +8,12 @@ captions.
 
 Show the empty Check screen.
 
-Say: "We have all sent a message that sounded fine in our head and landed
-badly. SayItRight checks how your message sounds before you send it. The
-AI is a small machine learning model that runs fully in your browser. No
-account, no server, nothing you type leaves your device."
+Say: "Hello, I am Ibrahim Yahaya from Bida, Niger State, Nigeria, a
+student at the Federal University of Technology Minna. We have all sent a
+message that sounded fine in our head and landed badly. SayItRight checks
+how your message sounds before you send it. The AI is a small machine
+learning model that runs fully in your browser. No account, no server,
+nothing you type leaves your device."
 
 ## Scene 2 - a harsh message (0:20 to 0:50)
 
@@ -65,4 +67,4 @@ Say: "It is not perfect. Sarcasm like this still fools it, because it
 counts words on their own. I would rather show that honestly than pretend
 otherwise. SayItRight: check how your message sounds, before you send it."
 
-End on the logo in the sidebar.
+End on the SayItRight logo in the top bar.

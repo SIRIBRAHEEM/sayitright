@@ -36,7 +36,10 @@ history view keeps your past checks on your own device.
 
 ### How I built it
 
-The app is React and Vite. The AI is a multinomial naive Bayes text
+The app is React and Vite, styled with Tailwind CSS and a shadcn-style
+design system I wrote for it (soft lavender chat look, white message
+bubbles, a tone gauge, Lucide icons, Nunito and Inter fonts self hosted).
+The AI is a multinomial naive Bayes text
 classifier that I wrote from scratch in plain JavaScript. It tokenises the
 message into words plus a few style signals (repeated exclamation marks,
 question marks, words typed in ALL CAPS), then scores each tone using word
@@ -117,8 +120,9 @@ After adding three Harsh examples containing wahala in the Teach view: Harsh 97 
 
 ## Built with
 
-React, Vite, JavaScript, a naive Bayes classifier written from scratch,
-localStorage, Inter and Space Grotesk fonts (self hosted).
+React, Vite, Tailwind CSS (shadcn-style design system), JavaScript, a
+naive Bayes classifier written from scratch, localStorage, Lucide icons,
+Nunito and Inter fonts (self hosted).
 
 ## Team
 

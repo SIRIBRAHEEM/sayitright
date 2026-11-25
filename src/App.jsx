@@ -1,4 +1,11 @@
 import { useMemo, useState } from 'react'
+import {
+  MessageCircleHeart,
+  MessagesSquare,
+  GraduationCap,
+  History,
+  ShieldCheck,
+} from 'lucide-react'
 import AnalyseView from './components/AnalyseView.jsx'
 import TeachView from './components/TeachView.jsx'
 import SamplesView from './components/SamplesView.jsx'
@@ -13,10 +20,10 @@ import {
 } from './lib/storage.js'
 
 const VIEWS = [
-  { id: 'analyse', label: 'Check a message' },
-  { id: 'samples', label: 'Sample messages' },
-  { id: 'teach', label: 'Teach the model' },
-  { id: 'history', label: 'History' },
+  { id: 'analyse', label: 'Check a message', icon: MessageCircleHeart },
+  { id: 'samples', label: 'Sample messages', icon: MessagesSquare },
+  { id: 'teach', label: 'Teach the model', icon: GraduationCap },
+  { id: 'history', label: 'History', icon: History },
 ]
 
 export default function App() {
@@ -62,33 +69,46 @@ export default function App() {
   }
 
   return (
-    <div className="layout">
-      <aside className="sidebar">
-        <div>
-          <div className="logo">
-            SayIt<span>Right</span>
+    <div className="shell">
+      <header className="topbar">
+        <div className="topbar-inner">
+          <div className="brand">
+            <div className="brand-mark">
+              <MessageCircleHeart size={22} strokeWidth={2.2} />
+            </div>
+            <div>
+              <div className="brand-name">
+                SayIt<span>Right</span>
+              </div>
+              <div className="brand-sub">
+                Check how your message sounds before you send it.
+              </div>
+            </div>
           </div>
-          <div className="tagline">
-            Check how your message sounds before you send it.
-          </div>
+          <span className="model-pill">
+            <ShieldCheck size={14} />
+            Model trained on <strong>{allExamples.length} examples</strong>,
+            runs on this device
+          </span>
         </div>
-        <nav className="nav">
-          {VIEWS.map((v) => (
-            <button
-              key={v.id}
-              className={view === v.id ? 'active' : ''}
-              onClick={() => setView(v.id)}
-            >
-              {v.label}
-            </button>
-          ))}
-        </nav>
-        <div className="sidebar-foot">
-          Model trained on <strong>{allExamples.length} examples</strong>,
-          running fully in your browser. No account, no server, nothing you
-          type leaves this device.
+        <div className="tabbar">
+          <nav className="tabs" aria-label="Main">
+            {VIEWS.map((v) => {
+              const Icon = v.icon
+              return (
+                <button
+                  key={v.id}
+                  className={`tab ${view === v.id ? 'active' : ''}`}
+                  onClick={() => setView(v.id)}
+                >
+                  <Icon size={16} />
+                  {v.label}
+                </button>
+              )
+            })}
+          </nav>
         </div>
-      </aside>
+      </header>
 
       <main className="main">
         {view === 'analyse' && (
@@ -117,6 +137,10 @@ export default function App() {
           />
         )}
       </main>
+
+      <footer className="foot-note">
+        No account, no server, nothing you type leaves this device.
+      </footer>
     </div>
   )
 }
